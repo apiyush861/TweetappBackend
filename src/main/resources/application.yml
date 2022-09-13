@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      group:
+        custom:
+          include: '*'
+      probes:
+        enabled: 'true'
+      show-details: ALWAYS
+      show-components: ALWAYS
+server:
+  port: '8090'
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root12piy@cluster0.wal6j8o.mongodb.net/?retryWrites=true&w=majority
+      database: Cluster0
+  profiles:
+    active: nonprod
